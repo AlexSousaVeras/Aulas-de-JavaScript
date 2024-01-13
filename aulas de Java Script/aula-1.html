@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamentos de Dados</title>
+    <style>
+        body {
+            background-color: black;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h2, h3 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tratamento de dados</h1>
+    <h2>Maneiras de converter uma String para Número:</h2>
+    <h3>1º Number.parseInt(n)</h3> <!--Faz a conversão de um número para um número inteiro-->
+    <h3>2º Number.parseFloat(n)</h3> <!--Faz a conversão de um número para um número real-->
+    <h3>3º Number(n)</h3> <!--Ele converte para o tipo  definido, sem precisar do Int ou Float-->
+    <br><br><br>
+    <h2>Maneiras de converter Núnero para String:</h2>
+    <h3>1º String(n)</h3>
+    <h3>2º n.toString()</h3>
+    <br><br><br>
+    <h2>Formatando Strings</h2>
+    <h3>1º slength</h3> <!--quantos caracteres tem-->
+    <h3>2º toUpperCase()</h3> <!--tudo para 'MAIÚSCULA'-->
+    <h3>3º toLowerCase()</h3> <!--tudo para 'minúscula'-->
+
+    <script>
+       /* let nome = window.prompt('Qual o seu nome?'); //Precisa de um nome
+       window.alert('Bem vindo ' +nome+ '!') //colocamos o a variável fora das Aspas, acommpanha de um sinal de mais '+'
+       */
+
+
+       var n1 = Number(window.prompt('Digite um número: '))
+       var n2 = Number(window.prompt('Digite outro número: '))
+       var s = n1 + n2
+       // (number + number) para adição
+       // (string + string) para concatenação
+       window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // ${var} facilita mais que o moda usual
+
+    </script>
+</body>
+</html>

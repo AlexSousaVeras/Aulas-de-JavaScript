@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body {
+            background-color: black;
+            
+        }
+        h1 {
+            color:  white;
+        }
+        h2, h3, p div {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos no DOM</h1> <!--É um conjunto de objetos dentro do navegador que dar acesso aos componentes internos de um WebSite, ele não funciona dentro do Node.js-->
+    <h3>DOM é um Acrônimo para Document Object Model(Modelo de Objetos para documentos)</h3> 
+    <p>Devo aprender a fazer e a  usar a Árvore DOM, essa árvore cria raizes, e essas reizes se chamam 'window', tudo dentro do JavaScript está denro de um window.</p>
+    <p>Dentro do window tem vários outros três objetos, por exemplo: location, document e history</p>
+    <p>location: Fala qual é a localização do WebSite, a URL, qual a página anterior...</p>
+    <p>document: Esse é o documento atual. Dentro dele fica o documento HTML, e dentro do mesmo fica o 'head' e o 'body'</p>
+    <p>history: Diz de onde eu vim, para onde eu vou,  isso facilita a navegação dento do site.</p>
+    <br>
+    <h1>Como navegar pelos elementos</h1>
+    <h3>Métodos para selecionar os elementos:</h3>
+    <p>por Marca: getElementsByName()</p> <!--Pode selecionar mais de um elemente ou tag-->
+    <p>por ID:  getElementById()</p>
+    <p>por Nome: getElementsByName()</p> <!--Devo usar o colchete, pois teem mais de um elemento-->
+    <p>por Classe: getElementByClassName()</p>
+    <p>por Seletor: querySeletor() e querySeletorAll(). O querySeletor() é no singular, e o querySeletorAll() é no plural. E esse método é o mais recomedado</p> 
+    <br>
+    <div id="msg">Clique</div>
+    <div name="alex">Xela</div>
+    <div class="sand">Alex</div>
+
+
+    <script>
+        // Usando o getElementsByTagNAme
+        let h1 = window.document.getElementsByTagName('h1')[0]; // Pega o primeiro elemento h1
+        let h1a = window.document.getElementsByTagName('h1')[1]; // Pega o segundo elemeto h1
+        h1.style.color = 'blue'; // Muda a cor desse elemento
+        h1a.style.color = 'blue';
+        let corpo = window.document.body; // Pega o elento body
+        corpo.style.background = 'white'; // Muda a cor do bacground desse elemento
+        
+        /*
+        // Usando o getElementById()
+        let d = window.document.getElementById("msg") // Seleciona o parágrafo com o id='msg'
+        d.style.color = 'black'
+        //d.innerText = 'Alex' ou 
+        window.document.getElementById('msg').innerText = "Alex"
+        
+
+        // Usando getElementByName()
+        let d = window.document.getElementsByName("alex")[0]
+        d.style.color = 'red'
+        d.innerText = 'Alex'
+        */
+
+        let d = window.document.querySelector('div.sand') // Muito mais prático
+        d.style.color = 'blue'
+    </script>
+</body>
+</html>

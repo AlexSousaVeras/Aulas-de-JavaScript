@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM 2</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-color: rgb(174, 179, 173);
+            text-align: center;
+        }
+        h1, br, div {
+            color: green;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+            border-radius: 10px;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+        .mult {
+            background-color: green;
+        }
+
+        .mult:hover {
+            border-radius: 10px;
+            background: rgb(0, 0, 0);
+            color: green;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplicando valores</h1>
+    <input type="Number" name="txtn1" id="txtn1"> X
+    <input type="Number" name="txtn2" id="txtn2">
+    <input class="mult" type="button" value="Calcular" onclick="multiplicar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function multiplicar() {
+            let tn1 = window.document.getElementById('txtn1') //Posso usar dessa forma
+            let tn2 = window.document.querySelector('input#txtn2') //E dessa outra forma(obs: mais usual)
+            let res = window.document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let m = n1 * n2 // Criar a formula do resultdo
+            res.innerHTML = `A multiplicação de ${n1} e ${n2} é igual á <strong> ${m} </strong>.`
+        }
+    </script>
+</body>
+</html>
